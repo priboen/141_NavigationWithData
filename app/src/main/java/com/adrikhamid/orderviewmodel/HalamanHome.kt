@@ -22,8 +22,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.adrikhamid.orderviewmodel.ui.theme.OrderViewModelTheme
 
 @Composable
 fun HalamanHome(
@@ -64,22 +66,30 @@ fun HalamanHome(
                     modifier = Modifier
                         .align(Alignment.CenterHorizontally)
                 )
-                Row (
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(dimensionResource(R.dimen.padding_medium))
-                        .weight(1f, false),
-                    horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
-                    verticalAlignment = Alignment.Bottom
-                ){
-                    Button(
-                        modifier = Modifier.weight(1f),
-                        onClick = onNextButtonClicked
-                    ) {
-                        Text(stringResource(R.string.next))
-                    }
-                }
             }
         }
+        Row (
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(dimensionResource(R.dimen.padding_medium))
+                .weight(1f, false),
+            horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
+            verticalAlignment = Alignment.Bottom
+        ){
+            Button(
+                modifier = Modifier.weight(1f),
+                onClick = onNextButtonClicked
+            ) {
+                Text(stringResource(R.string.next))
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewHalamanHome(){
+    OrderViewModelTheme{
+        HalamanHome(onNextButtonClicked = {})
     }
 }
