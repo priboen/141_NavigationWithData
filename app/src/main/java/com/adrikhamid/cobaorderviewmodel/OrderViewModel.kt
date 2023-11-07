@@ -1,8 +1,8 @@
-package com.adrikhamid.orderviewmodel
+package com.adrikhamid.cobaorderviewmodel
 
 import android.icu.text.NumberFormat
 import androidx.lifecycle.ViewModel
-import com.adrikhamid.orderviewmodel.data.OrderUIState
+import com.adrikhamid.cobaorderviewmodel.data.OrderUIState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

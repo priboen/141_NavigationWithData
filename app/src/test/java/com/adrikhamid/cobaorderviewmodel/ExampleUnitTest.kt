@@ -1,4 +1,4 @@
-package com.adrikhamid.orderviewmodel
+package com.adrikhamid.cobaorderviewmodel
 
 import org.junit.Test
 

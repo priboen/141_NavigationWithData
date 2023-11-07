@@ -1,4 +1,4 @@
-package com.adrikhamid.orderviewmodel
+package com.adrikhamid.cobaorderviewmodel
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -25,7 +25,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.adrikhamid.orderviewmodel.ui.theme.OrderViewModelTheme
+import com.adrikhamid.cobaorderviewmodel.ui.theme.OrderViewModelTheme
+import com.adrikhamid.orderviewmodel.R
 
 @Composable
 fun HalamanHome(
@@ -90,6 +91,8 @@ fun HalamanHome(
 @Composable
 fun PreviewHalamanHome(){
     OrderViewModelTheme{
-        HalamanHome(onNextButtonClicked = {})
+        HalamanHome{
+
+        }
     }
 }

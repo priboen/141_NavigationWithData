@@ -1,4 +1,4 @@
-package com.adrikhamid.orderviewmodel.data
+package com.adrikhamid.cobaorderviewmodel.data
 
 data class OrderUIState(
     val jumlah: Int = 0,

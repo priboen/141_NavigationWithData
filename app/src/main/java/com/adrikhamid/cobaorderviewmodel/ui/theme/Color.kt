@@ -1,4 +1,4 @@
-package com.adrikhamid.orderviewmodel.ui.theme
+package com.adrikhamid.cobaorderviewmodel.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

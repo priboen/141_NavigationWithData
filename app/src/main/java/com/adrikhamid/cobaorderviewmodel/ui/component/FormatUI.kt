@@ -1,4 +1,4 @@
-package com.adrikhamid.orderviewmodel.ui.component
+package com.adrikhamid.cobaorderviewmodel.ui.component
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text

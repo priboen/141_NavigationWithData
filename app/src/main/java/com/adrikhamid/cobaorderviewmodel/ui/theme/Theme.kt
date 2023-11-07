@@ -1,4 +1,4 @@
-package com.adrikhamid.orderviewmodel.ui.theme
+package com.adrikhamid.cobaorderviewmodel.ui.theme
 
 import android.app.Activity
 import android.os.Build

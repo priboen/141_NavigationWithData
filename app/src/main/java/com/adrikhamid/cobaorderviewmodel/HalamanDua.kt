@@ -1,6 +1,5 @@
-package com.adrikhamid.orderviewmodel
+package com.adrikhamid.cobaorderviewmodel
 
-import android.provider.SyncStateContract.Columns
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,8 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import com.adrikhamid.orderviewmodel.data.OrderUIState
-import com.adrikhamid.orderviewmodel.ui.component.FormatLabelHarga
+import com.adrikhamid.cobaorderviewmodel.data.OrderUIState
+import com.adrikhamid.cobaorderviewmodel.ui.component.FormatLabelHarga
+import com.adrikhamid.orderviewmodel.R
 
 @Composable
 fun HalamanDua(
