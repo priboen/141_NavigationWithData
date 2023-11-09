@@ -20,63 +20,65 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.adrikhamid.cobaorderviewmodel.ui.theme.OrderViewModelTheme
-import com.adrikhamid.orderviewmodel.R
+import com.adrikhamid.cobaorderviewmodel.R
 
 @Composable
 fun HalamanHome(
     onNextButtonClicked: () -> Unit
-){
-    val img = painterResource(id = R.drawable.menantea)
-    Column (modifier = Modifier,
-        verticalArrangement = Arrangement.SpaceBetween){
-        OutlinedCard (
+) {
+    val image = painterResource(id = R.drawable.esteh)
+    Column(
+        modifier = Modifier,
+        verticalArrangement = Arrangement.SpaceBetween
+    ) {
+        OutlinedCard(
             colors = CardDefaults.cardColors(
                 containerColor = MaterialTheme.colorScheme.surface
             ),
-            border = BorderStroke(1.dp, Color.Black), modifier = Modifier
+            border = BorderStroke(1.dp, Color.Black),
+            modifier = Modifier
                 .fillMaxWidth(0.95f)
                 .padding(vertical = 50.dp)
                 .align(Alignment.CenterHorizontally)
-        ){
-            Column (horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
-                    .align(Alignment.CenterHorizontally)){
-                Image(
-                    painter = img,
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop
-                )
-                Text(text = "MenanTea",
+                    .align(Alignment.CenterHorizontally)
+            ) {
+                Image(painter = image, contentDescription = " ", contentScale = ContentScale.Crop)
+                Text(
+                    text = "Es teh",
                     color = Color.DarkGray,
+                    fontFamily = FontFamily.Cursive,
                     fontSize = 35.sp,
-                    modifier = Modifier
-                        .align(Alignment.CenterHorizontally
-                        )
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
                 )
-                Text(text = "Seger",
+                Text(
+                    text = "Gembrumbung",
                     color = Color.DarkGray,
+                    fontFamily = FontFamily.Cursive,
                     fontStyle = FontStyle.Italic,
                     fontSize = 60.sp,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
+                    fontWeight = FontWeight.Bold
                 )
             }
         }
-        Row (
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(dimensionResource(R.dimen.padding_medium))
                 .weight(1f, false),
             horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
             verticalAlignment = Alignment.Bottom
-        ){
+        ) {
             Button(
                 modifier = Modifier.weight(1f),
                 onClick = onNextButtonClicked
@@ -89,9 +91,9 @@ fun HalamanHome(
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewHalamanHome(){
-    OrderViewModelTheme{
-        HalamanHome{
+fun prev() {
+    OrderViewModelTheme {
+        HalamanHome {
 
         }
     }

@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Order View Model"
+rootProject.name = "Es Jumbo"
 include(":app")
  

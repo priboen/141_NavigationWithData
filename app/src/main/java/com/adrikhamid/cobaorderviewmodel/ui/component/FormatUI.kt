@@ -6,12 +6,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 import androidx.compose.ui.res.stringResource
-import com.adrikhamid.orderviewmodel.R
+import com.adrikhamid.cobaorderviewmodel.R
 
 @Composable
-fun FormatLabelHarga(subtotal: String, modifier: Modifier = Modifier){
-    Text(text = stringResource(R.string.subtotal_price, subtotal),
-        modifier = modifier,
+fun FormatLabelHarga(subtotal: String, modifier: Modifier = Modifier) {
+    Text(
+        text = stringResource(R.string.subtotal_price, subtotal),
+        modifier = Modifier,
         style = MaterialTheme.typography.headlineSmall
     )
 }

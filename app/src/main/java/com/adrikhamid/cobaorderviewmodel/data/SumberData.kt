@@ -1,7 +1,7 @@
 package com.adrikhamid.cobaorderviewmodel.data
 
+import com.adrikhamid.cobaorderviewmodel.R
 
-import com.adrikhamid.orderviewmodel.R
 
 object SumberData {
     val rasa = listOf(
