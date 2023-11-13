@@ -17,6 +17,15 @@ class OrderViewModel : ViewModel() {
     val stateUI: StateFlow<OrderUIState> = _stateUI.asStateFlow()
     val namaST: StateFlow<FormState> = _namaSTATE.asStateFlow()
 
+    fun setNama(list: MutableList<String>){
+        _namaSTATE.update { stateSaatIni -> stateSaatIni.copy(
+            nama = list[0],
+            alamat = list[1],
+            hp = list[2]
+        )
+        }
+    }
+
     fun setJumlah(jmlEsJumbo: Int) {
         _stateUI.update { stateSaatIni ->
             stateSaatIni.copy(

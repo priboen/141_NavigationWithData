@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -26,10 +27,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.adrikhamid.cobaorderviewmodel.data.SumberData.rasa
 import com.adrikhamid.cobaorderviewmodel.R
+import com.adrikhamid.cobaorderviewmodel.data.SumberData.toString
 
 enum class PengelolaHalaman {
     Home,
     Rasa,
+    Form,
     Summary
 }
 
@@ -80,10 +83,18 @@ fun EsJumboApp(
         ) {
             composable(route = PengelolaHalaman.Home.name) {
                 HalamanHome(onNextButtonClicked = {
-                    navController.navigate(PengelolaHalaman.Rasa.name)
+                    navController.navigate(PengelolaHalaman.Form.name)
                 }
                 )
             }
+            composable(route = PengelolaHalaman.Form.name){
+                HalamanForm(
+                    onSubmitButtonClicked = {
+                        viewModel.setNama(it)
+                        navController.navigate(PengelolaHalaman.Rasa.name)},
+                    onBackButtonClicked = {navController.popBackStack()})
+            }
+
             composable(route = PengelolaHalaman.Rasa.name) {
                 val context = LocalContext.current
                 HalamanSatu(

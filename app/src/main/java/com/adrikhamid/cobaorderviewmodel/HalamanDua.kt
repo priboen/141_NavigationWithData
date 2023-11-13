@@ -44,7 +44,10 @@ fun HalamanDua(
             modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
             verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
-            DataPemesan(namaPemesan = formState.nama)
+            DataPemesan(
+                namaPemesan = formState.nama
+            )
+
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
             items.forEach { item ->
                 Column {

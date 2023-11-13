@@ -19,16 +19,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HalamanForm(){
+fun HalamanForm(
+    onSubmitButtonClicked: (MutableList<String>) -> Unit,
+    onBackButtonClicked: () -> Unit
+){
 
     var namaTxt by remember{
         mutableStateOf("")
@@ -41,6 +42,7 @@ fun HalamanForm(){
     var hpTxt by remember {
         mutableStateOf("")
     }
+    var listData: MutableList<String> = mutableListOf(namaTxt,alamatTxt,hpTxt)
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -82,20 +84,14 @@ fun HalamanForm(){
         Row (modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ){
-            Button(onClick = { /*TODO*/ }) {
-                Text(text = stringResource(id = R.string.btn_submit))
+            Button(onClick = onBackButtonClicked) {
+                Text(text = stringResource(id = R.string.back_button))
             }
 
-            Button(onClick = { /*TODO*/ }) {
-                Text(text = stringResource(id = R.string.back_button))
+            Button(onClick = { onSubmitButtonClicked(listData) }) {
+                Text(text = stringResource(id = R.string.btn_submit))
             }
         }
     }
 
-}
-
-@Preview (showBackground = true)
-@Composable
-fun showForm(){
-    HalamanForm()
 }
