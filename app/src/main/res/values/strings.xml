@@ -17,6 +17,7 @@
     <string name="total_price">Total %s</string>
     <string name="btn_submit">Submit</string>
     <string name="namaUser">Nama</string>
+    <string name="namaOrder">Nama Pemesan : %s</string>
     <string name="alamatUser">Alamat</string>
     <string name="telpUser">No Telp</string>
 
