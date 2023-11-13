@@ -17,13 +17,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.adrikhamid.cobaorderviewmodel.data.OrderUIState
 import com.adrikhamid.cobaorderviewmodel.ui.component.FormatLabelHarga
 import com.adrikhamid.cobaorderviewmodel.R
+import com.adrikhamid.cobaorderviewmodel.data.FormState
+import com.adrikhamid.cobaorderviewmodel.ui.component.DataPemesan
 
 
 @Composable
 fun HalamanDua(
+    formState: FormState,
     orderUiState: OrderUIState,
     onCancelButtonClicked: () -> Unit,
     modifier: Modifier = Modifier
@@ -40,6 +44,8 @@ fun HalamanDua(
             modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
             verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
+            DataPemesan(namaPemesan = formState.nama)
+            Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
             items.forEach { item ->
                 Column {
                     Text(item.first.uppercase())
@@ -70,4 +76,10 @@ fun HalamanDua(
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun show2(){
+    HalamanDua(orderUiState = OrderUIState(), formState = FormState(), onCancelButtonClicked = { /*TODO*/ })
 }
