@@ -45,7 +45,9 @@ fun HalamanDua(
             verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
             DataPemesan(
-                namaPemesan = formState.nama
+                namaPemesan = formState.nama,
+                alamatPemesan = formState.alamat,
+                telpPemesan = formState.hp
             )
 
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
