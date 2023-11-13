@@ -72,6 +72,7 @@ fun EsJumboApp(
         }
     ) { innerPadding ->
         val uiState by viewModel.stateUI.collectAsState()
+        val namaState by viewModel.namaST.collectAsState()
         NavHost(
             navController = navController,
             startDestination = PengelolaHalaman.Home.name,
@@ -100,6 +101,7 @@ fun EsJumboApp(
             composable(route = PengelolaHalaman.Summary.name) {
                 HalamanDua(
                     orderUiState = uiState,
+                    formState = namaState,
                     onCancelButtonClicked = { cancelOrderAndNavigateToRasa(navController) })
             }
         }
