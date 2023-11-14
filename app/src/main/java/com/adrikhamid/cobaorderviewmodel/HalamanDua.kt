@@ -18,6 +18,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.adrikhamid.cobaorderviewmodel.data.OrderUIState
 import com.adrikhamid.cobaorderviewmodel.ui.component.FormatLabelHarga
 import com.adrikhamid.cobaorderviewmodel.R
@@ -49,8 +50,7 @@ fun HalamanDua(
                 alamatPemesan = formState.alamat,
                 telpPemesan = formState.hp
             )
-
-            Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
+            Spacer(modifier = Modifier.padding(8.dp))
             items.forEach { item ->
                 Column {
                     Text(item.first.uppercase())
@@ -58,10 +58,10 @@ fun HalamanDua(
                 }
                 Divider(thickness = dimensionResource(R.dimen.thickness_divider))
             }
-            Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
+            Spacer(modifier = Modifier.padding(8.dp))
             FormatLabelHarga(
                 subtotal = orderUiState.harga,
-                modifier = Modifier.align(Alignment.End)
+                modifier = Modifier.align(Alignment.End),
             )
         }
         Row(

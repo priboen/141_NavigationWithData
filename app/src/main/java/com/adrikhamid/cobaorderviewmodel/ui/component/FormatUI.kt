@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.adrikhamid.cobaorderviewmodel.R
+import com.adrikhamid.cobaorderviewmodel.data.FormState
 
 @Composable
 fun FormatLabelHarga(subtotal: String, modifier: Modifier = Modifier) {
@@ -26,24 +27,25 @@ fun DataPemesan(
     namaPemesan: String,
     alamatPemesan: String,
     telpPemesan: String,
-    modifier: Modifier = Modifier){
+ ){
     Text(
-        text = stringResource(R.string.namaOrder, namaPemesan),
-        modifier = Modifier,
-        style = MaterialTheme.typography.headlineSmall
+        text = stringResource(R.string.namaOrder)
     )
-    Spacer(modifier = Modifier.padding(10.dp))
+    Text(namaPemesan)
+    Divider()
+    Spacer(modifier = Modifier.padding(8.dp))
+
     Text(
-        text = stringResource(R.string.alamatOrder, alamatPemesan),
-        modifier = Modifier,
-        style = MaterialTheme.typography.headlineSmall
+        text = stringResource(R.string.alamatOrder)
     )
-    Spacer(modifier = Modifier.padding(10.dp))
+    Text(alamatPemesan)
+    Divider()
+    Spacer(modifier = Modifier.padding(8.dp))
+
     Text(
-        text = stringResource(R.string.hpOrder, telpPemesan),
-        modifier = Modifier,
-        style = MaterialTheme.typography.headlineSmall
+        text = stringResource(R.string.hpOrder),
     )
-    Spacer(modifier = Modifier.padding(10.dp))
+    Text(telpPemesan)
+    Divider()
 
 }
